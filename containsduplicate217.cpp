@@ -1,8 +1,6 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        std::cin<<s<<endl;
-};        std::map<int,int> h;
         std::map<int,int> h;
         for (int i=1; i<nums.size(); i++){
             h[nums[0]]=0;
