@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int characterReplacement(string s, int k) {
+        vector<int>v(26,0);
+        int i=0;
+        int a=0;
+        int m=0;
+        for (int j=0; j<s.size(); j++){
+            v[s[j]-'A']++;
+            a=max(a,v[s[j]-'A']);
+            while((j-i+1)-a>k){
+                v[s[i]-'A']--;
+                i++;
+            }
+            m=max(m,j-i+1);
+        }
+        return m;
+    }
+};
